@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SIGEMO</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+    <!-- Contenedor del login -->
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Logo y mensaje de bienvenida -->
+            <div class="logo-section">
+                <img src="imagenes sigemo\logo5.png" alt="Logo de SIGEMO" class="logo-image">
+                <h1>Bienvenido a SIGEMO</h1>
+                <p>Por favor, ingresa tus credenciales para acceder al sistema integral de gestión y monitoreo.</p>
+            </div>
+
+            <!-- Formulario de login -->
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" name="username" required placeholder="Introduce tu usuario">
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required placeholder="Introduce tu contraseña">
+                </div>
+                <div class="submit-group">
+                    <button type="submit" class="login-btn">Iniciar Sesión</button>
+                </div>
+                <p id="error-message" class="error-message"></p> <!-- Mensaje de error -->
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer con información de SIGEMO -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 SIGEMO - Sistema de Gestión de Turnos. La plataforma más eficiente para la gestión de rondas de seguridad y asignación de turnos.</p>
+            <img src="imagenes sigemo\logo5.png" alt="Logo de SIGEMO" class="footer-logo">
+        </div>
+    </footer>
+
+    <!-- Script para cambiar las imágenes de fondo cada 7 segundos con transición suave -->
+    <script>
+        const backgrounds = [
+            'imglogin1.jpg',
+            'imglogin2.jpg',
+            'imglogin3.jpg',
+            'imglogin4.jpg',
+            'imglogin5.png'
+        ];
+
+        let currentIndex = 0;
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % backgrounds.length;
+            document.body.style.backgroundImage = `url(${backgrounds[currentIndex]})`;
+        }
+
+        setInterval(changeBackground, 4500); // Cambiar cada 7 segundos
+    </script>
+
+    <!-- Script para manejar la validación del login -->
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('error-message');
+
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simulación de validación de credenciales
+            if (username === "admin" && password === "1234") {
+                // Redirigir al dashboard si las credenciales son correctas
+                window.location.href = "dashboard.html";
+            } else {
+                // Mostrar mensaje de error si las credenciales son incorrectas
+                errorMessage.textContent = "Error: Usuario o contraseña incorrectos. Si el problema persiste, comuníquese con el servicio al cliente.";
+                errorMessage.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empresas - SIGEMO</title>
+    <link rel="stylesheet" href="empresa.css">
+</head>
+<body>
+    <!-- Encabezado con Logo -->
+    <header>
+        <div class="logo-container">
+            <img src="imagenes sigemo/image.png" alt="Logo de Sigemo">
+        </div>
+        <h1>Sistema de Gestión de Turnos</h1>
+    </header>
+
+    <!-- Sección de CRUD -->
+    <section class="crud-container">
+        <h2>Administrar Empresas</h2>
+
+        <!-- Crear Empresa -->
+        <div class="form-container">
+            <h3>Crear Empresa</h3>
+            <form id="createForm">
+                <label for="nombre">Nombre de la Empresa:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email de Contacto:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+
+                <button type="submit">Registrar Empresa</button>
+            </form>
+        </div>
+
+        <!-- Leer Empresas -->
+        <div class="table-container">
+            <h3>Lista de Empresas</h3>
+            <table id="empresaTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas dinámicas aquí -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Actualizar Empresa (Se llena al seleccionar editar) -->
+        <div class="form-container" id="updateFormContainer" style="display:none;">
+            <h3>Actualizar Empresa</h3>
+            <form id="updateForm">
+                <input type="hidden" id="updateId">
+                
+                <label for="updateNombre">Nombre de la Empresa:</label>
+                <input type="text" id="updateNombre" name="nombre" required>
+
+                <label for="updateEmail">Email de Contacto:</label>
+                <input type="email" id="updateEmail" name="email" required>
+
+                <label for="updateTelefono">Teléfono:</label>
+                <input type="text" id="updateTelefono" name="telefono" required>
+
+                <button type="submit">Actualizar Empresa</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 SIGEMO - Gestión de Turnos</p>
+            <img src="imagenes sigemo\image.png" alt="Logo de SIGEMO" class="footer-logo">
+        </div>
+    </footer>
+
+    <script src="empresa.js"></script>
+</body>
+</html>

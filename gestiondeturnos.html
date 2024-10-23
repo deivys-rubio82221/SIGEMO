@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Turnos</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido al Sistema de Gestión de Turnos</h1>
+        <h3>Supervisor Encargado: Carlos Pérez</h3>
+
+        <h4>Ubicaciones</h4>
+        <button class="ubicacion-btn" id="ubicacion1" onclick="seleccionarUbicacion('ubicacion1')">Edificio Principal</button>
+        <button class="ubicacion-btn" id="ubicacion2" onclick="seleccionarUbicacion('ubicacion2')">Área Industrial</button>
+        <button class="ubicacion-btn" id="ubicacion3" onclick="seleccionarUbicacion('ubicacion3')">Entrada Principal</button>
+        <button class="ubicacion-btn" id="ubicacion4" onclick="seleccionarUbicacion('ubicacion4')">Estacionamiento</button>
+
+        <h4>Selecciona un día de la semana:</h4>
+        <select id="dias-semana">
+            <option value="lunes">Lunes</option>
+            <option value="martes">Martes</option>
+            <option value="miércoles">Miércoles</option>
+            <option value="jueves">Jueves</option>
+            <option value="viernes">Viernes</option>
+            <option value="sábado">Sábado</option>
+            <option value="domingo">Domingo</option>
+        </select>
+
+        <h4>Cronograma de Turnos</h4>
+        <div id="cronograma-turnos">
+            <div id="turno1">
+                <p>Turno 1</p>
+                <p>Entrada: <span id="entrada1">Sin Asignar</span> <button class="add-btn" onclick="asignarGuardia('entrada1')">+</button> <button class="remove-btn" onclick="eliminarGuardia('entrada1')">-</button></p>
+                <p>Salida: <span id="salida1">Sin Asignar</span> <button class="add-btn" onclick="asignarGuardia('salida1')">+</button> <button class="remove-btn" onclick="eliminarGuardia('salida1')">-</button></p>
+                <p>Patrullaje: <span id="patrullaje1">Sin Asignar</span> <button class="add-btn" onclick="asignarGuardia('patrullaje1')">+</button> <button class="remove-btn" onclick="eliminarGuardia('patrullaje1')">-</button></p>
+                <button class="asignar-btn">Asignar Guardias</button>
+            </div>
+            <div id="turno2">
+                <p>Turno 2</p>
+                <p>Entrada: <span id="entrada2">Sin Asignar</span> <button class="add-btn" onclick="asignarGuardia('entrada2')">+</button> <button class="remove-btn" onclick="eliminarGuardia('entrada2')">-</button></p>
+                <p>Salida: <span id="salida2">Sin Asignar</span> <button class="add-btn" onclick="asignarGuardia('salida2')">+</button> <button class="remove-btn" onclick="eliminarGuardia('salida2')">-</button></p>
+                <p>Patrullaje: <span id="patrullaje2">Sin Asignar</span> <button class="add-btn" onclick="asignarGuardia('patrullaje2')">+</button> <button class="remove-btn" onclick="eliminarGuardia('patrullaje2')">-</button></p>
+                <button class="asignar-btn">Asignar Guardias</button>
+            </div>
+        </div>
+
+        <h4>Vigilantes Disponibles</h4>
+        <div id="vigilantes">
+            <button onclick="seleccionarTodos()">Seleccionar Todos</button>
+            <button onclick="limpiarSeleccion()">Limpiar Selección</button>
+            <br><br>
+            <input type="checkbox" id="guardia1" value="Juan Pérez"> Juan Pérez<br>
+            <input type="checkbox" id="guardia2" value="María Gómez"> María Gómez<br>
+            <input type="checkbox" id="guardia3" value="Luis Rodríguez"> Luis Rodríguez<br>
+            <input type="checkbox" id="guardia4" value="Carla Mendoza"> Carla Mendoza<br>
+        </div>
+    </div>
+
+    <script src="scripts_turnos.js"></script>
+
+        <!-- Footer con información de SIGEMO -->
+        <footer>
+            <div class="footer-content">
+                <p>© 2024 SIGEMO - Sistema de Gestión de Turnos. La plataforma más eficiente para la gestión de rondas de seguridad y asignación de turnos.</p>
+                <img src="imagenes sigemo\logo5.png" alt="Logo de SIGEMO" class="footer-logo">
+            </div>
+        </footer>
+</body>
+</html>

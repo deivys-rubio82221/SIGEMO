@@ -1,0 +1,116 @@
+/* Estilo para asegurar que las imágenes de fondo fluyan */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Transición suave */
+}
+
+/* Contenedor de login centrado con márgenes y movido hacia arriba */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -50px; /* Ajuste para mover el contenedor hacia arriba */
+}
+
+/* Caja de login con tamaño limitado y mayor separación entre inputs */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Más sombra */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos para el logo y el mensaje de bienvenida */
+.logo-section {
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para los grupos de entrada con mayor espaciado */
+.input-group {
+    margin-bottom: 20px; /* Espaciado mayor entre inputs */
+    text-align: left; /* Alineación a la izquierda de los labels */
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none; /* Bordes invisibles */
+    border-bottom: 2px solid #ccc; /* Línea sutil solo en la parte inferior */
+    border-radius: 0; /* Eliminar el radio para las esquinas */
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: transparent; /* Fondo transparente */
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Botón de login más estilizado */
+.login-btn {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Mensaje de error */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Footer con logo alineado y tamaño reducido */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px; /* Reducir el tamaño del footer */
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    margin-left: 10px;
+    max-width: 30px; /* Logo más pequeño en el footer */
+}
+
+footer p {
+    font-size: 12px; /* Texto más pequeño en el footer */
+}

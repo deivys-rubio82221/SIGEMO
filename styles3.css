@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.ubicacion-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ubicacion-btn:hover {
+    background-color: #0056b3;
+}
+
+.ubicacion-btn.selected {
+    background-color: #28a745;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#cronograma-turnos {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#turno1, #turno2 {
+    margin-bottom: 20px;
+}
+
+.add-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.add-btn:hover {
+    background-color: #218838;
+}
+
+.remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+.asignar-btn {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.asignar-btn:hover {
+    background-color: #117a8b;
+}
+
+#vigilantes {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#vigilantes button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#vigilantes button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer con logo alineado y tamaño reducido */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px; /* Reducir el tamaño del footer */
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    margin-left: 10px;
+    max-width: 30px; /* Logo más pequeño en el footer */
+}
+
+footer p {
+    font-size: 12px; /* Texto más pequeño en el footer */
+}
